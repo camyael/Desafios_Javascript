@@ -1,4 +1,4 @@
-let precio, opciones
+/*let precio, opciones
 
 do {
     precio = parseFloat(prompt("Ingrese el precio para saber si tiene descuento"))
@@ -40,3 +40,49 @@ do {
         alert("El producto no cuenta con ningun descuento, esperamos que vuelva pronto")
     }
 } while (opciones != 2)
+*/
+
+alert("Usted está por entrar al simulador de Hoyts para comprar entradas")
+
+let simulador = true 
+
+while(simulador){
+    let nombre = prompt("¿Cuál es su nombre? Por favor, escribir nombre completo")
+    console.log(`¡Bienvenido/a ${nombre}!`)
+
+    let cine
+    do {
+        cine = prompt("Ingrese el Cine al que quiere ir: \n\nCinemark Avellaneda\nCinemark Palermo\nCinemark Puerto Madero\nHoyts Abasto").toLowerCase()
+
+        if((cine == "cinemark avellaneda") || (cine == "cinemark palermo") || (cine == "cinemark puerto madero") || (cine == "hoyts abasto")){
+            console.log(`${nombre} ha seleccionado ${cine}`)
+
+            
+
+
+        }else {
+            console.log(`Cine no encontrado`)
+            alert("Por favor, escribir el cine como dice anteriormente")
+        }
+
+       /* let continuar
+        do {
+            continuar = prompt("¿Desea continuar comprando más entradas?").toLowerCase()
+            switch (continuar) {
+                case "si":
+                    console.log("si")
+                    break;
+                
+                case no:
+                    simulador = false
+                    console.log("no")
+                    break;
+        
+                default:
+                    alert("Respuesta no valida")
+                    break;
+            }
+        } while ((continuar != "si") || (continuar != "no"));*/
+    
+    } while ((cine != "cinemark avellaneda") || (cine != "cinemark palermo") || (cine != "cinemark puerto madero") || (cine != "hoyts abasto"));
+}
