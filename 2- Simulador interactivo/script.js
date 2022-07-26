@@ -8,13 +8,11 @@ function precioEntradas(cantidadEntrada, sala) {
 let simulador = true
 
 while(simulador) {
-    let nombre = prompt("¿Cuál es su nombre? Por favor, escribir nombre completo")
+    let nombre = prompt("¿Cuál es su nombre? Por favor, escribir nombre completo").toUpperCase()
     console.log(`¡Bienvenido/a ${nombre}!`)
-
-    let cine
     do {
         //eligiendo cine
-        cine = prompt("Ingrese el Cine al que quiere ir: \n\nCinemark Avellaneda\nCinemark Palermo\nCinemark Puerto Madero\nHoyts Abasto").toLowerCase()
+        let cine = prompt("Ingrese el Cine al que quiere ir: \n\nCinemark Avellaneda\nCinemark Palermo\nCinemark Puerto Madero\nHoyts Abasto").toLowerCase()
 
         if((cine == "cinemark avellaneda") || (cine == "cinemark palermo") || (cine == "cinemark puerto madero") || (cine == "hoyts abasto")){
             console.log(`${nombre} ha seleccionado ${cine}`)
@@ -36,12 +34,12 @@ while(simulador) {
                 if (entrada <= 6) {
                     //salas
                     let salaCine = parseInt(prompt("¿Desea las Salas 2D o las Salas 3D? Escriba 1 o 2 segun corresponda"))
-                    if (salaCine = 1) {
+                    if (salaCine == 1) {
                         //SALA 2D
                         let resultado = precioEntradas(entrada, entrada2d)
                         console.log(`$${resultado}`)
                         alert(`${nombre}, esta por comprar ${entrada} entrada/s en 2D (cada entrada sale $${entrada2d}) para ver ${pelicula} en ${cine} \n\nEl total seria $${resultado}`)
-                    } else if (salaCine = 2) {
+                    } else if (salaCine == 2) {
                         //SALA 3D 
                         let resultado = precioEntradas(entrada, entrada3d)
                         console.log(`$${resultado}`)
@@ -49,8 +47,9 @@ while(simulador) {
                     } else {
                         alert("No contamos con esa sala")
                     }
-
-                    let continuar = prompt("¿Desea continuar?")
+                    
+                    //confirmacion para seguir
+                    let continuar = prompt("¿Desea continuar?").toLowerCase()
                     if(continuar == "no"){
                         simulador = false
                     }
@@ -68,17 +67,7 @@ while(simulador) {
             alert("Por favor, escribir el nombre del cine como dice anteriormente")
         }
 
-        let continuar = prompt("¿Desea continuar?")
-            if(continuar == "no"){
-                simulador = false
-            }
-
-    } while ((cine != "cinemark avellaneda") || (cine != "cinemark palermo") || (cine != "cinemark puerto madero") || (cine != "hoyts abasto"));
-
-    let continuar = prompt("¿Desea continuar?").toLowerCase()
-        if(continuar == "no"){
-            simulador = false
-        }
+    } while (simulador != false);
 }
 
 
