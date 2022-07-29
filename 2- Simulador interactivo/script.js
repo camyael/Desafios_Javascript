@@ -1,9 +1,11 @@
 alert("Usted está por entrar al simulador de Hoyts para comprar entradas")
 
 //FUNCIONES
-function precioEntradas(cantidadEntrada, sala) {
+/*function precioEntradas(cantidadEntrada, sala) {
     return cantidadEntrada * sala
-}
+}*/
+// FUNCION ARROW PARA MEJORAR SINTAXIS
+const precioEntradas = (cantidadEntrada, sala) => cantidadEntrada * sala;
 
 let simulador = true
 
