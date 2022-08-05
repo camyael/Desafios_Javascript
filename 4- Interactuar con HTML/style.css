@@ -1,0 +1,113 @@
+/* TIPOGRAFIA */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* RESETEO */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* DISEÑO */
+body {
+    background-color: #ffe5ec;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    margin: 10px;
+    width: 70%;
+    border-radius: 10px;
+    background-color: #cdb4db;
+}
+
+#bienvenida {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.bienvenida_titulo {
+    color: #FFFF;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* REPRODUCTOR */
+
+#spotify {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    column-gap: 40px;
+    row-gap: 10px;
+    padding: 0px 50px;
+}
+
+#reproductor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.musica {
+    background-color: #ffb3c6;
+    color: #fb6f92;
+    font-size: 1rem;
+    border-radius: 5%;
+    width: 200px;
+    height: 340px;
+    margin: 20px 20px 0px 20px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 8px;
+}
+
+.info {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    row-gap: 2px;
+}
+
+.imagen img{
+    width: 160px;
+    height: 160px;
+    border-radius: 3px;
+}
+
+/* BOTONES DE REPRODUCTOR */
+.musica_botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.anterior,
+.siguiente {
+    width: 25px;
+}
+
+.play {
+    width: 35px;
+}
+
+/* INDICACION */
+
+h2 {
+    text-align: center;
+    color: #fb6f92;
+    padding: 20px;
+}
